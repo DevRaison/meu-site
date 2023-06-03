@@ -57,7 +57,7 @@ form textarea{
     .contactus-form{
     display: flex;
     flex-wrap: wrap;
-    height: 600px;
+    height: 400px;
     width: 300px;
     }
     form input{
