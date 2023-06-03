@@ -38,7 +38,7 @@ form input{
 form input:focus{
     border-radius: 16px;
     background-color: aqua;
-        transition: all 0.5s;
+    transition: all 0.5s;
 }
 form textarea:focus{
     border-radius: 16px;
@@ -52,6 +52,26 @@ form textarea{
     font-size: 15px;
     margin-bottom: 30px;
     transition: all 0.5s;
+}
+@media only screen and (max-width: 717px) {
+    .contactus-form{
+    display: flex;
+    flex-wrap: wrap;
+    height: 600px;
+    width: 300px;
+    }
+    form input{
+    padding: 5;
+    outline: none;
+    border: 0;
+    margin-bottom: 5px;
+    font-size: 10px;
+    }
+    form h3{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 16px;
+    }
 }
 .button-send-message{
     padding: 15px;
