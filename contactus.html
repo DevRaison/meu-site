@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/cardSlider.css">
+    <link rel="stylesheet" type="text/css" href="css/contactus.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+</head>
+<body>
+    <header>
+        <h1 id="logo">Dev<span>Raison</span></h1>
+        <button id="openMenu">&#9776;</button>
+        <nav id="menu">
+            <button id="closeMenu">X</button>      
+            <a id="inicio" href="index.html">
+                <span class="Inicio"><i class="bi bi-house-door"></i></span>
+                <span class="txt-link">Início</span>
+            </a>             
+            <a id="Projetos" href="projects.html">
+                <span class="projetos"><i class="bi bi-bag"></i></span>
+                <span class="txt-link">Projetos</span>
+            </a>              
+            <a id="habilidades" href="skills.html">
+                <span class="Habilidades"> <i class="bi bi-bar-chart-line"></i></span>
+                <span class="txt-link">Habilidades</span>
+            </a>  
+            <a id="sobre" href="about.html">
+                <span class="Sobre"><i class="bi bi-person-badge"></i></span>
+                <span class="txt-link">Sobre</span>
+            </a>
+            <a id="sobre" href="contactus.html" class="activedLink">
+                <span class="Contato"><i class="bi bi-envelope-paper"></i></span>
+                <span class="txt-link">Contato</span>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <section class="column">
+            <form class="contactus-form" action="https://formsubmit.co/raisoncontato@gmail.com" method="POST">
+                    <h3 class="text-animation">Formulário De Contato</h3>
+                    <label>Nome</label>
+                    <input type="text" name="name" placeholder="Seu nome" class="text-name" required></input>
+                    <label>E-mail</label>
+                    <input type="email" name="email" placeholder="Seu email" class="text-email" required></input>
+                    <label>Texto</label>
+                    <textarea type="text" name="message" placeholder="Mensagem de texto" 
+                    class="text-message" required></textarea>
+                    <input type="hidden" name="_next" value="https://devraison.github.io/meu-site/html/thankyou.html"></input>
+                    <input type="hidden" name="_autoresponse" value="Recebi sua mensagem, agradeço pelo contato. Em breve, irei responder!"></input>
+                    <button type="submit" class="button-send-message" onclick="sendMail()">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>
+            &copy: Copyright Dev Raison
+        </p>
+    </footer>
+    <script type="text/javascript" src="javascript/script.js"></script>
+    <script type="text/javascript" src="javascript/writingFX.js"></script>
+    <script type="text/javascript" src="javascript/flyingText.js"></script>
+</body>
+</html>

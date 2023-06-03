@@ -1,0 +1,369 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* Firefox scroll */
+* {
+  scrollbar-width: 12px;
+  scrollbar-color: transparent;
+}
+
+/* Chrome, Edge e Safari scroll */
+::-webkit-scrollbar {
+  width: 0;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Firefox scroll */
+*::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 20px;
+}
+
+body {
+  flex: 1 1 100vw;
+  flex-wrap: wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  margin: 2px auto;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(rgba(38, 32, 57, 0.8), rgb(0, 0, 0));
+  animation: transition-anim1 0.5s ease-in-out forwards;
+}
+
+header, main, footer {
+  display: flex;
+  margin-left: 24px;
+  margin-right: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  flex: 1 1 100vw;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgb(10, 0, 45));
+  color: white;
+  height: 80px;
+  padding-top: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+header #logo {
+  flex: 0 1 200px;
+  display: flex;
+  margin: 3px;
+  padding-bottom: 20px;
+  font-size: 40pt;
+  animation: transition-anim2 0.8s ease-in-out forwards;
+}
+
+h1 span {
+  color: rgb(245, 245, 245);
+}
+
+h1 {
+  color: rgb(100, 130, 200);
+}
+
+h2 {
+  padding-left: 60px;
+  align-items: center;
+  justify-content: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+.container, .interface, .column {
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.column {
+  flex-wrap: wrap;
+  position: relative;
+  margin: 10px;
+}
+
+.container, .column {
+  display: flex;
+}
+
+.interface, .column {
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+.container img {
+  display: flex;
+  width: 30%;
+  position: relative;
+  top: 0;
+  z-index: 0;
+  animation: opacity-anim1 3s ease-in-out forwards;
+  animation: img-float 5s ease-in-out infinite;
+}
+
+#matrixFX {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0;
+  z-index: -1;
+}
+
+#canvas1 {
+  position: relative;
+  width: 414px;
+  height: 607px;
+  z-index: 0;
+}
+
+.text-animation {
+  overflow: hidden;
+  z-index: 0;
+}
+
+.text-animation span {
+  position: relative;
+  opacity: 0;
+  animation: textAnimation 2s ease-in-out forwards;
+}
+
+.writing::after {
+  content: "|";
+  margin-left: 5px;
+  opacity: 1;
+  animation: pisca 0.5s infinite;
+}
+
+@keyframes transition-anim1 {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes opacity-anim1 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes transition-anim2 {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes textAnimation {
+  to {
+    top: 0;
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes pisca {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes initialize {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes img-float {
+  0%, 100% {
+    transform: translateX(-5px) translateY(0);
+  }
+  50% {
+    transform: translateX(0) translateY(-20px);
+  }
+}
+main {
+  flex: 20 1 600px;
+  flex-wrap: wrap;
+  overflow: hidden;
+  height: 100vh;
+  background: rgba(10, 0, 45, 0.2);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+main section {
+  width: 100%;
+  height: 100vh;
+  scroll-snap-align: start;
+  position: static;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.page1, .page2 {
+  height: 100vh;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.page2 {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgb(10, 0, 45));
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+.page1 img {
+  display: flex;
+  width: 30%;
+  position: relative;
+  top: -140px;
+  left: 60%;
+  z-index: 0;
+  animation: opacity-anim1 3s ease-in-out forwards;
+}
+
+.page1 p {
+  padding-top: 20px;
+  padding-left: 60px;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  flex: 1 1 100vw;
+  color: rgb(100, 130, 200);
+  background: rgba(10, 0, 45, 0.8);
+  display: flex;
+  height: 60px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#openMenu, #closeMenu {
+  border: none;
+  background: none;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 0px 5px 0px 5px;
+  cursor: pointer;
+  display: none;
+}
+
+nav {
+  flex: 1 1 100vw;
+  align-items: start;
+  justify-content: start;
+  display: flex;
+  margin: 3px;
+  padding-left: 100px;
+}
+
+nav a {
+  margin: 1%;
+  font-size: 16pt;
+}
+
+#menu a:hover {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  font-size: 24px;
+  display: flex;
+  color: lightblue;
+  box-shadow: 0 0 10px rgba(60, 40, 100, 0.1), 0 0 10px rgba(60, 40, 100, 0.2), 0 0 10px rgb(60, 40, 100);
+  transition: all 0.3px;
+}
+
+@media only screen and (max-width: 923px) {
+  header {
+    order: 0;
+  }
+  main {
+    order: 1;
+  }
+  aside {
+    flex: 1 1 100vw;
+    order: 2;
+  }
+  footer {
+    order: 3;
+  }
+}
+@media only screen and (max-width: 717px) {
+  #openMenu, #closeMenu {
+    display: block;
+    color: white;
+  }
+  #openMenu {
+    margin-left: auto;
+  }
+  #closeMenu {
+    position: fixed;
+    right: 15px;
+    top: 0px;
+  }
+  nav {
+    position: fixed;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgb(10, 0, 45));
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding-left: 30px;
+    display: none;
+    opacity: 0;
+    transition: all 1s;
+    top: 0;
+  }
+  #menu a {
+    margin: 20px;
+  }
+}
+a.activedLink {
+  background-color: rgb(60, 40, 100);
+  border: 1px solid rgba(100, 130, 200);
+  box-shadow: 0 0 20px rgba(60, 40, 100, 0.1), 0 0 20px rgba(60, 40, 100, 0.2), 0 0 20px rgb(60, 40, 100);
+}
