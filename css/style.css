@@ -365,11 +365,11 @@ nav a {
     margin: 0;
   }
   .page1, .page2 {
-    padding: 0;
+    padding-top: 0;
+    padding-botton: 10px;
+    padding-left: 0;
+    padding-right: 0;
     marging: 0;
-  }
-  p{
-    font-size: 8px;
   }
 }
 a.activedLink {
