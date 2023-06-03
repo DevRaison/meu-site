@@ -367,8 +367,9 @@ nav a {
   .page1, .page2 {
     padding: 0;
     marging: 0;
-    width: 100vw;
-    height: 100vh;
+  }
+  p{
+    font-size: 8px;
   }
 }
 a.activedLink {
