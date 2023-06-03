@@ -366,6 +366,8 @@ nav a {
   }
   .page1, .page2 {
     padding: 0;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
   }
 }
 a.activedLink {
